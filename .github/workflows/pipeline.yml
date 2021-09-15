@@ -13,7 +13,7 @@ jobs:
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
-      python-version: 3.9
+        python-version: 3.9
 
     - name: Install dependencies
       run: |
@@ -52,6 +52,7 @@ tests:
     - name: Integrations Test
       run: |
         python test.py
+        
 deploy:
   needs: tests
   runs-on: ubuntu-20.04
